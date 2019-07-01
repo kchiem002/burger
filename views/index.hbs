@@ -1,0 +1,24 @@
+<form>
+<h2>Add a burger:</h2>
+<p>
+    <label for="burger_name"></label></label>
+    <input id="burger_name" type="text">
+</p>
+<button id="addBurger">Submit</button>
+</form>
+
+<h2>Your available burgers:</h2>
+{{#each burgers}}
+<div class="orderedBurgers" data-uid={{id}}>
+    <h1>{{burger_name}}</h1>
+    <button id='devourBurger' data-uid={{id}}>Devour</button>
+</div>
+<hr>
+{{/each}}
+
+<h2>Burgers you've devoured:</h2>
+{{#each eatenBurgers}}
+<div class="eatenBurgers" data-uid={{id}}>
+    <h1>{{burger_name}}</h1>
+</div>
+{{/each}}
